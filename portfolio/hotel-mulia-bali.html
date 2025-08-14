@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Portfolio - Laksono SportCourt</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body class="bg-gradient-to-b from-blue-50 to-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white/90 backdrop-blur shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3 group">
+        <img src="/images/LaksonoSportCourt_50x50.png" class="h-10 w-10 rounded-lg shadow group-hover:scale-110 transition-transform" alt="Logo">
+        <span class="text-xl font-bold text-blue-800 group-hover:text-blue-600 transition">Laksono SportCourt</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="text-center py-12 bg-gradient-to-r from-blue-600 to-blue-800 text-white shadow-lg">
+    <h1 class="text-4xl font-bold mb-3">Lapangan Tenis - Hotel Mulia Bali</h1>
+    <p class="max-w-2xl mx-auto text-lg opacity-90">
+      Proyek pembangunan lapangan tenis standar internasional dengan lantai polyurethane merah dan sistem pencahayaan LED, dikerjakan untuk Hotel Mulia Bali.
+    </p>
+  </header>
+
+  <!-- Konten -->
+  <main class="container mx-auto px-6 py-12">
+    <!-- Tombol kembali -->
+    <a href="/" class="inline-block mb-8 px-5 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">
+      ← Kembali ke Home
+    </a>
+
+    <!-- Swiper Slider -->
+    <div class="swiper mySwiper rounded-xl shadow-lg">
+      <div class="swiper-wrapper">
+        
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <picture>
+            <!-- Gambar high-res untuk layar besar -->
+            <source media="(min-width: 1024px)" srcset="/images/portfolio/Hotel-Mulia-Bali/Hotel-Mulia-Bali.png">
+            <!-- Gambar default -->
+            <img src="/images/portfolio/Hotel-Mulia-Bali/Hotel-Mulia-Bali.png" 
+                 alt="Lapangan Tenis 1" 
+                 class="w-full aspect-video object-cover object-center">
+          </picture>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <picture>
+            <!-- Gambar high-res untuk layar besar -->
+            <source media="(min-width: 1024px)" srcset="/images/portfolio/Hotel-Mulia-Bali/Hotel-Mulia-Bali-2.png">
+            <!-- Gambar default -->
+            <img src="/images/portfolio/Hotel-Mulia-Bali/Hotel-Mulia-Bali-2.png" 
+                 alt="Lapangan Tenis 2" 
+                 class="w-full aspect-video object-cover object-center">
+          </picture>
+        </div>
+
+       <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <picture>
+            <!-- Gambar high-res untuk layar besar -->
+            <source media="(min-width: 1024px)" srcset="/images/portfolio/Hotel-Mulia-Bali/Hotel-Mulia-Bali-3.png">
+            <!-- Gambar default -->
+            <img src="/images/portfolio/Hotel-Mulia-Bali/Hotel-Mulia-Bali-3.png" 
+                 alt="Lapangan Tenis 2" 
+                 class="w-full aspect-video object-cover object-center">
+          </picture>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide">
+          <picture>
+            <!-- Gambar high-res untuk layar besar -->
+            <source media="(min-width: 1024px)" srcset="/images/portfolio/Hotel-Mulia-Bali/On-Progress.png">
+            <!-- Gambar default -->
+            <img src="/images/portfolio/Hotel-Mulia-Bali/On-Progress.png" 
+                 alt="Lapangan Tenis 2" 
+                 class="w-full aspect-video object-cover object-center">
+          </picture>
+        </div>
+        
+      </div>
+
+      <!-- Tombol navigasi -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center">
+    <p>© <span id="year"></span> Laksono SportCourt. Made with <span style="color:#ff4b5c;">&#10084;&#65039;</span></p>
+  </footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Swiper init
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+    });
+  </script>
+
+</body>
+</html>
