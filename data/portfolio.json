@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "lapangan-basket-smk-sportiva",
+    "title": "Lapangan Basket SMK Sportiva",
+    "category": "Basket",
+    "dateLabel": "Juni 2023",
+    "location": "Bandung",
+    "image": "https://placehold.co/1280x860",
+    "thumb": "https://placehold.co/800x540",
+    "summary": "Lantai polyurethane merah dan sistem pencahayaan LED.",
+    "features": [
+      "Polyurethane 2–3mm",
+      "LED high-bay",
+      "Marking standar FIBA",
+      "Ring adjustable"
+    ]
+  },
+  {
+    "slug": "futsal-center-bandung",
+    "title": "Futsal Center Bandung",
+    "category": "Futsal",
+    "dateLabel": "Maret 2023",
+    "location": "Bandung",
+    "image": "https://placehold.co/1280x860",
+    "thumb": "https://placehold.co/800x540",
+    "summary": "Rumput sintetis kualitas FIFA dan drainase optimal.",
+    "features": [
+      "Rumput sintetis (grade FIFA)",
+      "French drain perimeter",
+      "Cat marking tahan UV",
+      "Gawang profesional"
+    ]
+  },
+  {
+    "slug": "resort-pantai-indah",
+    "title": "Resort Pantai Indah",
+    "category": "Voli Pantai",
+    "dateLabel": "Desember 2022",
+    "location": "Bali",
+    "image": "https://placehold.co/1280x860",
+    "thumb": "https://placehold.co/800x540",
+    "summary": "Net profesional dan area penonton.",
+    "features": [
+      "Pasir silika, leveling khusus",
+      "Net profesional, tension adjustable",
+      "Boundary rope & marking tali",
+      "Zona penonton & akses aman"
+    ]
+  }
+]
