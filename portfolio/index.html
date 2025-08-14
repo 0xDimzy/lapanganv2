@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Laksono SportCourt</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/images/LaksonoSportCourt_50x50.png" class="h-10 w-10 rounded" alt="Logo">
+        <span class="text-xl font-bold text-blue-800">Laksono SportCourt</span>
+      </a>
+      <div class="hidden md:flex space-x-6">
+        <a href="/" class="navlink">Beranda</a>
+        <a href="/#services" class="navlink">Layanan</a>
+        <a href="/portfolio" class="navlink is-active">Portfolio</a>
+        <a href="/#material" class="navlink">Material</a>
+        <a href="/#about" class="navlink">Tentang Kami</a>
+        <a href="/#contact" class="navlink">Kontak</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="py-16 bg-blue-600 text-white text-center">
+    <h1 class="text-4xl font-bold mb-4">Portfolio Proyek Kami</h1>
+    <p class="max-w-2xl mx-auto text-lg text-white/80">
+      Beberapa proyek pembuatan dan renovasi lapangan olahraga yang telah kami kerjakan di berbagai daerah.
+    </p>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="py-16 container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="https://placehold.co/800x540" alt="Lapangan Basket" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">Lapangan Basket SMK Sportiva</h3>
+          <p class="text-gray-600 mb-4">Lantai polyurethane merah dan sistem pencahayaan LED</p>
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Basket</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="https://placehold.co/800x540" alt="Lapangan Futsal" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">Futsal Center Bandung</h3>
+          <p class="text-gray-600 mb-4">Rumput sintetis kualitas FIFA dan drainase optimal</p>
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">Futsal</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="https://placehold.co/800x540" alt="Lapangan Voli" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">Resort Pantai Indah</h3>
+          <p class="text-gray-600 mb-4">Net profesional dan area penonton</p>
+          <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Voli</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="https://placehold.co/800x540" alt="Lapangan Basket Outdoor" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="font-bold text-xl mb-2">Lapangan Basket Outdoor</h3>
+          <p class="text-gray-600 mb-4">Lapangan dengan sistem Flexypave anti slip</p>
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Basket</span>
+        </div>
+      </div>
+
+      <!-- Tambahkan card lain di sini dengan format yang sama -->
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+    © <span id="year"></span> Laksono SportCourt. Made with <span style="color:#ff4b5c;">&#10084;&#65039;</span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
