@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
         const animation = entry.target.dataset.animate || "animate__fadeInUp";
-        entry.target.style.animationDelay = `${index * 0.1}s`;
+        entry.target.style.animationDelay = `${index * 0.5}s`;
         entry.target.classList.add("animate__animated", animation);
       }
     });
