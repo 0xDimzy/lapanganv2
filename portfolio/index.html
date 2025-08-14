@@ -15,22 +15,41 @@
 <body class="bg-gray-50 font-sans">
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3">
-        <img src="/images/LaksonoSportCourt_50x50.png" class="h-10 w-10 rounded" alt="Logo">
-        <span class="text-xl font-bold text-blue-800">Laksono SportCourt</span>
-      </a>
-      <div class="hidden md:flex space-x-6">
-        <a href="/" class="navlink">Beranda</a>
-        <a href="/#services" class="navlink">Layanan</a>
-        <a href="/portfolio" class="navlink is-active">Portfolio</a>
-        <a href="/#material" class="navlink">Material</a>
-        <a href="/#about" class="navlink">Tentang Kami</a>
-        <a href="/#contact" class="navlink">Kontak</a>
-      </div>
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/images/LaksonoSportCourt_50x50.png" class="h-10 w-10 rounded" alt="Logo">
+      <span class="text-xl font-bold text-blue-800">Laksono SportCourt</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="/" class="navlink">Beranda</a>
+      <a href="/#services" class="navlink">Layanan</a>
+      <a href="/portfolio" class="navlink is-active">Portfolio</a>
+      <a href="/#material" class="navlink">Material</a>
+      <a href="/#about" class="navlink">Tentang Kami</a>
+      <a href="/#contact" class="navlink">Kontak</a>
     </div>
-  </nav>
+
+    <!-- Mobile Hamburger -->
+    <button id="menuBtn" class="md:hidden text-gray-800 focus:outline-none">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="menuPanel" class="md:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+    <div class="px-6 py-4 space-y-3">
+      <a href="/" class="block navlink">Beranda</a>
+      <a href="/#services" class="block navlink">Layanan</a>
+      <a href="/portfolio" class="block navlink is-active">Portfolio</a>
+      <a href="/#material" class="block navlink">Material</a>
+      <a href="/#about" class="block navlink">Tentang Kami</a>
+      <a href="/#contact" class="block navlink">Kontak</a>
+    </div>
+  </div>
+</nav>
 
   <!-- Hero -->
   <section class="py-16 bg-blue-600 text-white text-center">
@@ -96,6 +115,12 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+  const menuPanel = document.getElementById('menuPanel');
+  
+  menuBtn.addEventListener('click', () => {
+    menuPanel.classList.toggle('hidden');
+  });
   </script>
 </body>
 </html>
