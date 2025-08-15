@@ -1,5 +1,5 @@
 /* =============================
-   SportCourt Pro - styles.css
+   LAKSONO SportCourt - styles.css
    ============================= */
 
 /* Hero gradient */
@@ -126,6 +126,29 @@
   color: transparent;
 }
 .navlink.is-active::after{ width:100%; left:0; opacity:1; }
+
+/* ===== Swiper Styles for Equipment Sliders ===== */
+.ringBasketSwiper,
+.tiangTenisSwiper {
+  width: 100%;
+  max-width: 400px; /* Bisa diubah sesuai kebutuhan */
+  margin: auto;
+}
+
+.ringBasketSwiper .swiper-slide,
+.tiangTenisSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ringBasketSwiper img,
+.tiangTenisSwiper img {
+  width: 100%;
+  height: auto; /* Biar tidak terpotong */
+  object-fit: contain; /* Gambar utuh tanpa crop */
+  display: block;
+}
 
 /* ===== Background site ===== */
 .site-bg-mint {
