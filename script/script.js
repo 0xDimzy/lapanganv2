@@ -1,4 +1,3 @@
-// Animate on Scroll (default)
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".animate-on-scroll");
 
@@ -15,12 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
   elements.forEach(el => observer.observe(el));
 });
 
-// Tahun otomatis
 document.getElementById('year').textContent = new Date().getFullYear();
-
-// ===== Mobile menu logic
 const menuBtn = document.getElementById('menuBtn');
 const menuPanel = document.getElementById('menuPanel');
+
+new Swiper('.ringBasketSwiper', {
+    loop: true,
+    pagination: {
+      el: '.ringBasketSwiper .swiper-pagination',
+      clickable: true,
+    },
+  });
+
+  new Swiper('.tiangTenisSwiper', {
+    loop: true,
+    pagination: {
+      el: '.tiangTenisSwiper .swiper-pagination',
+      clickable: true,
+    },
+  });
 
 function closeMenu() {
   if (!menuPanel) return;
@@ -45,7 +57,6 @@ document.addEventListener('click', (e) => {
 });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
-// ===== Smooth scroll + Animate on menu click
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const targetId = a.getAttribute('href');
@@ -57,18 +68,15 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       const navbarHeight = document.getElementById('navbar')?.offsetHeight || 0;
       const elementPosition = target.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - navbarHeight;
-
-      // Scroll halus
       window.scrollTo({
         top: offsetPosition,
         behavior: 'smooth'
       });
 
-      // Reset dan trigger animasi setelah scroll selesai
       setTimeout(() => {
         target.querySelectorAll(".animate-on-scroll").forEach(el => {
           el.classList.remove("animate__animated", el.dataset.animate);
-          void el.offsetWidth; // Reflow untuk reset animasi
+          void el.offsetWidth;
           el.classList.add("animate__animated", el.dataset.animate || "animate__fadeInUp");
         });
       }, 600);
@@ -78,14 +86,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Sticky nav shadow
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 4) navbar.classList.add('shadow-lg');
   else navbar.classList.remove('shadow-lg');
 });
 
-// Nav active state
 const navLinks = Array.from(document.querySelectorAll('.navlink'));
 const sections = Array.from(document.querySelectorAll('section[id]'));
 
@@ -103,7 +109,6 @@ const io = new IntersectionObserver((entries) => {
 sections.forEach(sec => io.observe(sec));
 setActiveById('home');
 
-// ===== WhatsApp popup & floating button
 const WA_NUMBER = '6281330852765';
 const waLink = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent('Halo, saya ingin konsultasi pembuatan/renovasi lapangan.')}`;
 const waPopup = document.getElementById('waPopup');
